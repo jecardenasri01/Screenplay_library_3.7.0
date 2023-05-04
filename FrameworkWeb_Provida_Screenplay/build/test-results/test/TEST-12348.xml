@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="12348" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-05-04T17:14:16" hostname="IMAGEMAKER-PC" time="54.885">
+  <properties/>
+  <testcase name="12348 buscar cancion (Ch): #1" classname="12348" time="32.209"/>
+  <testcase name="12348 buscar cancion (Ch): #2" classname="12348" time="22.676"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Starting Microsoft Edge WebDriver 111.0.1661.62 (0a8f453929e6410c973aa529a40485ce4e3e03db) on port 14934
+To submit feedback, report a bug, or suggest new features, please visit https://github.com/MicrosoftEdge/EdgeWebDriver
+
+Only local connections are allowed.
+Please see https://aka.ms/WebDriverSecurity for suggestions on keeping Microsoft Edge WebDriver safe.
+
+Microsoft Edge WebDriver was started successfully.
+Starting Microsoft Edge WebDriver 111.0.1661.62 (0a8f453929e6410c973aa529a40485ce4e3e03db) on port 6272
+To submit feedback, report a bug, or suggest new features, please visit https://github.com/MicrosoftEdge/EdgeWebDriver
+
+Only local connections are allowed.
+Please see https://aka.ms/WebDriverSecurity for suggestions on keeping Microsoft Edge WebDriver safe.
+
+Microsoft Edge WebDriver was started successfully.
+]]></system-err>
+</testsuite>

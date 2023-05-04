@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="40ed368f7b39c5e6818a2f7f885c60f1ea7a1dc9c953a91f3f3b94f8f1bbf7dc.html">12348</a></span>
+                > <span class="truncate-60"><a
+                    href="fefde167099e8b396ada747dd582bfaa343a40232ad247c2e3894f56a4519f66.html">12348 buscar cancion (Ch) </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="bi bi-chat-text"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 04-05-2023 12:14</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">12348 </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="980553ab65ac3a80cb226527d564bcf09dfb50e9d5c6245f24578a314fb4b271.html">Cucumber
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="4b59ae6653aebba42755603f63edcc610e447dca4c5d6938ccdf5fe39dc86cdd.html">Microsoftedge
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="f55cf301e8f51d63aebeb8bc8dbe880df940586e2a502c7a3e24c2b639523f8f.html">Windows
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="0bdb81a5de601afc0a8f16a6397094c8e813e2c505072b5516e928db8e3f5202.html">Microsoftedge, Windows
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">12348 buscar cancion (Ch)
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given usuario realiza busqueda en navegador google de &lt;cancion&gt;<br>When accede a youtube<br>Then revisa nombre de cancion sea &lt;cancionesperada&gt;</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="733a41ed4faa05b1ca9a246b08e49ad05ca8833d92bcbf0f2c3d8c96f968b3dc.png" title=" 1: 12348 buscar cancion (Ch): ({cancion=juanes tu foto, cancionesperada=Juanes, Nelly Furtado})" width="1863"/>
+                <img src="733a41ed4faa05b1ca9a246b08e49ad05ca8833d92bcbf0f2c3d8c96f968b3dc.png" title=" Given usuario realiza busqueda en navegador google de juanes tu foto" width="1863"/>
+                <img src="733a41ed4faa05b1ca9a246b08e49ad05ca8833d92bcbf0f2c3d8c96f968b3dc.png" title=" jeisson abrir pagina youtube" width="1863"/>
+                <img src="733a41ed4faa05b1ca9a246b08e49ad05ca8833d92bcbf0f2c3d8c96f968b3dc.png" title=" jeisson opens the Dri google" width="1863"/>
+                <img src="733a41ed4faa05b1ca9a246b08e49ad05ca8833d92bcbf0f2c3d8c96f968b3dc.png" title=" jeisson abrir pagina youtube (completed)" width="1863"/>
+                <img src="7abbe84594e565ebd63021edc944b097d52710071d67a090ff4bc6eee0c735dc.png" title=" Busqueda canci&oacute;n en google" width="1863"/>
+                <img src="733a41ed4faa05b1ca9a246b08e49ad05ca8833d92bcbf0f2c3d8c96f968b3dc.png" title=" jeisson enters 'juanes tu foto' into save icon" width="1863"/>
+                <img src="f1faa707474b7c94a51990c2f39da3fe629e8e9c059b69160b4cba62a7776a46.png" title=" jeisson enters 'juanes tu foto' into save icon (completed)" width="1863"/>
+                <img src="f1faa707474b7c94a51990c2f39da3fe629e8e9c059b69160b4cba62a7776a46.png" title=" jeisson types 'ENTER' in save icon" width="1863"/>
+                <img src="f3aca327eac2dbe8958a138254726e058a70570d1fe73a4281399c713314888a.png" title=" jeisson types 'ENTER' in save icon (completed)" width="1863"/>
+                <img src="f3aca327eac2dbe8958a138254726e058a70570d1fe73a4281399c713314888a.png" title=" Busqueda canci&oacute;n en google (completed)" width="1863"/>
+                <img src="f3aca327eac2dbe8958a138254726e058a70570d1fe73a4281399c713314888a.png" title=" Given usuario realiza busqueda en navegador google de juanes tu foto (completed)" width="1863"/>
+                <img src="f3aca327eac2dbe8958a138254726e058a70570d1fe73a4281399c713314888a.png" title=" When accede a youtube" width="1863"/>
+                <img src="f3aca327eac2dbe8958a138254726e058a70570d1fe73a4281399c713314888a.png" title=" Then revisa nombre de cancion sea Juanes, Nelly Furtado" width="1863"/>
+                <img src="f3aca327eac2dbe8958a138254726e058a70570d1fe73a4281399c713314888a.png" title=" 1: 12348 buscar cancion (Ch): ({cancion=juanes tu foto, cancionesperada=Juanes, Nelly Furtado}) (completed)" width="1863"/>
+                <img src="7abbe84594e565ebd63021edc944b097d52710071d67a090ff4bc6eee0c735dc.png" title=" 2: 12348 buscar cancion (Ch): ({cancion=juanes tu camisa negra, cancionesperada=Juanes - La Camisa Negra})" width="1863"/>
+                <img src="7abbe84594e565ebd63021edc944b097d52710071d67a090ff4bc6eee0c735dc.png" title=" Given usuario realiza busqueda en navegador google de juanes tu camisa negra" width="1863"/>
+                <img src="7abbe84594e565ebd63021edc944b097d52710071d67a090ff4bc6eee0c735dc.png" title=" jeisson abrir pagina youtube" width="1863"/>
+                <img src="7abbe84594e565ebd63021edc944b097d52710071d67a090ff4bc6eee0c735dc.png" title=" jeisson opens the Dri google" width="1863"/>
+                <img src="7abbe84594e565ebd63021edc944b097d52710071d67a090ff4bc6eee0c735dc.png" title=" jeisson abrir pagina youtube (completed)" width="1863"/>
+                <img src="7abbe84594e565ebd63021edc944b097d52710071d67a090ff4bc6eee0c735dc.png" title=" Busqueda canci&oacute;n en google" width="1863"/>
+                <img src="733a41ed4faa05b1ca9a246b08e49ad05ca8833d92bcbf0f2c3d8c96f968b3dc.png" title=" jeisson enters 'juanes tu camisa negra' into save icon" width="1863"/>
+                <img src="fd0545fb653c553a36707f667a6709da58aa840b7296330c3a13efe3feaef457.png" title=" jeisson enters 'juanes tu camisa negra' into save icon (completed)" width="1863"/>
+                <img src="fd0545fb653c553a36707f667a6709da58aa840b7296330c3a13efe3feaef457.png" title=" jeisson types 'ENTER' in save icon" width="1863"/>
+                <img src="ffff5ca4e0b5bee0edeef9b3224a18c18936bfccd69e5c70047b8f9a34934981.png" title=" jeisson types 'ENTER' in save icon (completed)" width="1863"/>
+                <img src="ffff5ca4e0b5bee0edeef9b3224a18c18936bfccd69e5c70047b8f9a34934981.png" title=" Busqueda canci&oacute;n en google (completed)" width="1863"/>
+                <img src="ffff5ca4e0b5bee0edeef9b3224a18c18936bfccd69e5c70047b8f9a34934981.png" title=" Given usuario realiza busqueda en navegador google de juanes tu camisa negra (completed)" width="1863"/>
+                <img src="ffff5ca4e0b5bee0edeef9b3224a18c18936bfccd69e5c70047b8f9a34934981.png" title=" When accede a youtube" width="1863"/>
+                <img src="ffff5ca4e0b5bee0edeef9b3224a18c18936bfccd69e5c70047b8f9a34934981.png" title=" Then revisa nombre de cancion sea Juanes - La Camisa Negra" width="1863"/>
+                <img src="ffff5ca4e0b5bee0edeef9b3224a18c18936bfccd69e5c70047b8f9a34934981.png" title=" 2: 12348 buscar cancion (Ch): ({cancion=juanes tu camisa negra, cancionesperada=Juanes - La Camisa Negra}) (completed): <span class='success-color'>SUCCESS</span>" width="1863"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.7.0</span>
+</div>
+</body>
+</html>
